@@ -1,11 +1,10 @@
 "use client";
 
 import Message from "@/components/message";
-import { useChat } from "ai/react";
+import { useChat } from '@ai-sdk/react';
 
 export default function Home() {
-  const { messages, input, handleInputChange, handleSubmit, status } =
-    useChat();
+  const { messages, input, handleInputChange, handleSubmit, status } = useChat();
 
   return (
     <div className="flex flex-col h-screen max-w-6xl w-full mx-auto">
