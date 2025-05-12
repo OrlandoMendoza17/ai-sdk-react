@@ -4,7 +4,8 @@ import Message from "@/components/message";
 import { useChat } from "ai/react";
 
 export default function Home() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+  const { messages, input, handleInputChange, handleSubmit, status } =
+    useChat();
 
   return (
     <div className="flex flex-col h-screen max-w-6xl w-full mx-auto">
@@ -22,6 +23,7 @@ export default function Home() {
             placeholder="Type your message..."
             className="flex-1 p-2 border rounded-lg bg-transparent text-white outline-none"
           />
+          <span>status: {status}</span>
           <button
             type="submit"
             className="px-4 py-2 border rounded-lg hover:bg-white/10"
